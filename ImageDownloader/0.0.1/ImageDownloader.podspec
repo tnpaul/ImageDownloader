@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
    }
 
 #  spec.source       = { :git => "http://EXAMPLE/ImageDownloader.git", :tag => "#{spec.version}" }
-  spec.source           = { :http => 'http://127.0.0.1:8080/ImageDownloader_0_0_1.zip'}
+  spec.source           = { :http => 'https://github.com/tnpaul/ImageDownloader/releases/download/0.1.1/ImageDownloader_0_0_1.zip'}
 
   #  spec.source_files  = "Classes", "Classes/**/*.swift"
 #  spec.source_files  = "#{spec.name}/Classes/**/*"
