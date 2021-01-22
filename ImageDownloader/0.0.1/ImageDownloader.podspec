@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
    }
 
 #  spec.source       = { :git => "http://EXAMPLE/ImageDownloader.git", :tag => "#{spec.version}" }
-  spec.source           = { :http => 'https://github.com/tnpaul/ImageDownloader/releases/download/0.1.1/ImageDownloader_0_0_1.zip'}
+  spec.source           = { :http => 'https://github.com/tnpaul/ImageDownloader/releases/download/0.0.1/ImageDownloader_0_0_1.zip'}
 
   #  spec.source_files  = "Classes", "Classes/**/*.swift"
 #  spec.source_files  = "#{spec.name}/Classes/**/*"
@@ -43,6 +43,12 @@ Pod::Spec.new do |spec|
   # spec.resources = "Resources/*.png"
 
    spec.frameworks = "UIKit", "Foundation"
+   spec.ios.vendored_frameworks = 'ImageDownloader.framework'
+   
+   spec.pod_target_xcconfig = {
+       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+     }
+   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   # spec.libraries = "iconv", "xml2"
 
